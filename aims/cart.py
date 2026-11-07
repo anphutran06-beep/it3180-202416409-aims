@@ -23,6 +23,14 @@ class Cart:
         print("The disc is not in the cart")
         return False
 
+    def sort_by_title(self):
+        """Sắp xếp các đĩa trong giỏ hàng theo tiêu đề (A-Z)"""
+        self.items.sort(key=lambda dvd: dvd.title)
+
+    def sort_by_cost(self):
+        """Sắp xếp các đĩa trong giỏ hàng theo giá tiền tăng dần"""
+        self.items.sort(key=lambda dvd: dvd.cost)
+        
     def total_cost(self):
         return sum(item.cost for item in self.items)
 
