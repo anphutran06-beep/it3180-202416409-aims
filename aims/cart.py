@@ -9,7 +9,7 @@ class Cart:
 
     def add_dvd(self, dvd):
         if len(self.items) >= MAX_NUMBERS_ORDERED:
-            print("The cart is almost full")
+            print("The cart is almost full - Hotfix")
             return False
         self.items.append(dvd)
         print(f"Đã thêm đĩa '{dvd.title}' vào giỏ hàng")
